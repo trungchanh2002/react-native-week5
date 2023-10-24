@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-const Screen2 = () => {
+function Screen02({}) {
   const navigation = useNavigation();
+
   const [imageSource, setImageSource] = useState(
     require("./assets/vs_blue.png")
   );
@@ -28,7 +29,7 @@ const Screen2 = () => {
     setImageSource(imageMap.silver);
   };
   const handlePress5 = () => {
-    navigation.navigate("Home", { selectedImageSource: imageSource });
+    navigation.navigate("Screen01", { selectedImageSource: imageSource });
   };
 
   return (
@@ -71,7 +72,7 @@ const Screen2 = () => {
       </View>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -133,4 +134,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Screen2;
+export default Screen02;
